@@ -58,10 +58,12 @@ class ChildrenController extends Controller
 
     public function destroy($id){
 
-        $parents = Childrens::find($id);
-        $parents->delete();
+        $child = Childrens::find($id);
+        $child->delete();
 
-        return view('children.create');
+        $parents = Parents::all();
+
+        return view('children.create', ['parents' => $parents]);
 
     }
 

@@ -32,7 +32,6 @@
                     <th scope="row">{{$parents->name_father}}</th>
                     <th scope="row">{{$parents->name_mother}}</th>
                     <th scope="row"><a href="{{ route('parents.edit', $parents->id) }}">Editar</a></th>
-                    <th scope="row"><a href="{{ route('parents.destroy', $parents->id) }}">Excluir</a></th>
 
                     @endforeach
                 </tr>

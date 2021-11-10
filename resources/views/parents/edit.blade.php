@@ -22,9 +22,8 @@
 {{ Form::open(array('url' => 'parents/' . $parents->id, 'class' => 'pull-right')) }}
 {{ Form::hidden('_method', 'DELETE') }}
 {{ Form::submit('Excluir', array('class' => 'btn btn-warning')) }}
-
-
-{{ Form::close() }} <br />
+{{ Form::close() }}
+<br />
 
 <table class="table" style="border: 1px solid black">
     <thead>
@@ -38,11 +37,11 @@
             <th scope="row" style="border-collapse: collapse">{{$child->name}}</th>
             <th scope="row" style="border-collapse: collapse"><a href="{{ route('children.edit', $child->id) }}">Editar</a></th>
 
+
             @endforeach
         </tr>
     </tbody>
 </table>
-
 
 </body>
 </html>
